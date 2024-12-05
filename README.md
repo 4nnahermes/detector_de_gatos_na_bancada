@@ -6,8 +6,29 @@ Este projeto foi desenvolvido como parte da disciplina de Fundamentos de Intelig
 
 Utilizando o modelo YOLOv4 em conjunto com a biblioteca OpenCV e desenvolvido em Python, o sistema emprega uma rede neural profunda (DNN) para identificar gatos de maneira eficiente e precisa. Este trabalho demonstra a aplicação de técnicas de inteligência artificial para resolver desafios específicos da visão computacional.
 
+## Configuração do ambiente virtual
 
-## Instalação de Dependências
+1. Criar o ambiente virtual
+
+```bash
+python -m venv env-visao  
+```
+
+2. Ativar o ambiente virtual:
+
+No macOS e Linux:
+
+```bash
+source ./env-visao/bin/activate
+```
+
+No Windows:
+
+```bash
+source ./env-visao/bin/activate
+```
+
+## Instalação de dependências
 
 Certifique-se de que seu ambiente virtual esteja ativado. Instale as dependências listadas no arquivo `requirements.txt`:
 
@@ -22,7 +43,7 @@ numpy==2.1.3
 opencv-python==4.10.0.84
 ```
 
-### Verificação da Instalação
+### Verificação da instalação
 
 Para verificar se as bibliotecas foram instaladas corretamente, você pode executar o seguinte comando em um terminal Python:
 
@@ -34,7 +55,7 @@ print(f"OpenCV version: {cv2.__version__}")
 print(f"NumPy version: {np.__version__}")
 ```
 
-## Links para Download de Modelos YOLO
+## Links para download de modelos YOLO
 Caso não encontre todos os arquivos listados abaixo na pasta raiz do projeto, faça o download pelos links fornecidos a seguir:
 
 - Arquivo de configuração: [yolov4-tiny.cfg](https://github.com/Tianxiaomo/pytorch-YOLOv4/blob/master/cfg/yolov4-tiny.cfg)
@@ -42,7 +63,7 @@ Caso não encontre todos os arquivos listados abaixo na pasta raiz do projeto, f
 - Arquivo de nomes das classes: [coco.names](https://github.com/pjreddie/darknet/blob/master/data/coco.names)
 
 
-## Executando o Projeto
+## Rodar o script
 
 Para executar o rastreio de pessoas, simplesmente execute o script `main.py` com Python. Certifique-se de que todos os arquivos necessários estão na mesma pasta que o script.
 
@@ -50,12 +71,17 @@ Para executar o rastreio de pessoas, simplesmente execute o script `main.py` com
 python main.py
 ```
 
-## Encerrando o Projeto
+## Encerrar o script
 
 Pressionar 'q' para sair do aplicativo.
 
+## Desativar o ambiente virtual
 
-## Alterações no Projeto
+```bash
+deactivate
+````
+
+## Alterações para caso de uso de outros vídeos
 
 - Caso deseje utilizar outro vídeo para fazer a detecção, certificar-se que ele está na mesma pasta que o script e altere este trecho no script (substituindo "gato.mp4" pelo nome do seu vídeo):
 ```bash
